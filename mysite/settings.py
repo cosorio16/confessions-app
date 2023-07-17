@@ -87,7 +87,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgresql://postgres:postgres@localhost/postgres',
+        default='postgresql://postgres:postgres@localhost/mysite',
         conn_max_age=600
     )
 }
