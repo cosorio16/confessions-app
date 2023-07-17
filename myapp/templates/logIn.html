@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/static/assets/logo.png" sizes="32x32">
+    <script src="https://kit.fontawesome.com/6e976ef1ef.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/login.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="cardLog">
+            <div class="boxsh">
+                <div class="imgLog"></div>
+                <h1>Crea tu nombre de usuario</h1>
+
+                <p> {{error}} </p>
+    
+                <div class="formLog">
+                    
+                    <form action="/login/" method="POST">
+                        {% csrf_token %}
+                        {{form}}
+                        <button type="submit">
+                            <a href="/sms/">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </a>
+                        </button>
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>
+            By Osodev &copy; 2023
+        </p>
+    </footer>
+</body>
+</html>

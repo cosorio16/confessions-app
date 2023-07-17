@@ -1,0 +1,119 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/6e976ef1ef.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{% static '/static/assets/logo.png' %}" sizes="32x32">
+    <link rel="stylesheet" href="{% static '/css/confesiones.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENSAJES</title>
+</head>
+
+<body>
+    <div class="container">
+        <section id="confLinks">
+            <div class="infoConf">
+                <h1>Hecho</h1>
+                <p>Copia y comparte el siguiente enlace en tus redes.</p>
+            </div>
+            <div class="enlaceContainer">
+                <input id="inputEnlace" class="inpCopy" type="text" value="" readonly>
+                <button class="buttonCopy" onclick="copyToClipboard()">
+                    Copiar enlace
+                </button>
+                
+                <a id="enlacePerfil" href="{% url 'perfil' enlace=enlace %}"></a>                
+            </div>
+            
+
+            <div class="botonesRedes">
+                <button class="fbButton" onclick="shareFacebook()"><i class="fa-brands fa-facebook"></i></button>
+                <button class="igButton" onclick="shareInstagram()"><i class="fa-brands fa-instagram"></i></button>
+                <button class="twButton" onclick="shareTwitter()"><i class="fa-brands fa-twitter"></i></button>
+                <button class="wtButton" onclick="shareWhatsApp()"><i class="fa-brands fa-whatsapp"></i></button>
+            </div>
+
+            <p class="scrolldown">
+                Desliza hacia abajo
+            </p>
+            
+        </section>
+
+        <section id="cards-SMS">
+            <h1>Tus Mensajes<i class="fa-solid fa-comment"></i></h1>
+                <div class="containerSMS" id="cardsContainer">
+                    {% for a in confesiones %}
+                    <div class="card">
+                        <p>{{a.mensaje}}</p>
+                    </div>
+                    {% endfor %}   
+                </div>
+        </section>
+    </div>
+
+    <script>
+        const cardsContainer = document.getElementById("cardsContainer");
+        const colors = [
+            "rgb(42, 255, 102)",
+            "rgb(6, 117, 154)",
+            "rgb(7, 112, 5)",
+            "rgba(154, 6, 142, 0.89)",
+            "rgb(154, 80, 6)",
+            "rgb(218, 136, 12)",
+            "rgb(22, 210, 78)",
+            "rgb(23, 147, 188)",
+            "rgb(154, 43, 6)",
+            "rgb(154, 6, 73)",
+        ];
+    
+        const children = cardsContainer.getElementsByClassName("card");
+    
+        for (let i = 0; i < children.length; i++) {
+            const card = children[i];
+            const colorIndex = i % colors.length; // Obtener el índice cíclico del color
+            card.style.background = colors[colorIndex];
+        }
+        function copyToClipboard() {
+            var enlace = document.getElementById("enlacePerfil").href;
+            var input = document.getElementById("inputEnlace");
+            input.value = enlace;
+            input.select();
+            input.setSelectionRange(0, 99999);
+            document.execCommand("copy");
+            alert("¡Enlace copiado!");
+        }
+ 
+        function shareFacebook() {
+            var url = document.getElementById("enlacePerfil").href;
+            var facebookLink = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url);
+            window.open(facebookLink, "_blank");
+          }
+          
+          function shareInstagram() {
+            var url = document.getElementById("enlacePerfil").href;
+            var instagramLink = "https://www.instagram.com/add_to_story?url=" + encodeURIComponent(url);
+            window.open(instagramLink, "_blank");
+          }
+          
+          function shareTwitter() {
+            var url = document.getElementById("enlacePerfil").href;
+            var twitterLink = "https://twitter.com/intent/tweet?url=" + encodeURIComponent(url);
+            window.open(twitterLink, "_blank");
+          }
+          
+          function shareWhatsApp() {
+            var url = document.getElementById("enlacePerfil").href;
+            var whatsappLink = "https://api.whatsapp.com/send?text=" + encodeURIComponent(url);
+            window.open(whatsappLink, "_blank");
+          }
+          
+    </script>
+</body>
+
+</html>

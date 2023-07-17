@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    overscroll-behavior-y: contain;
+}
+
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+#confLinks {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    scroll-snap-align: center;
+}
+
+.infoConf {
+    width: 300px;
+    height: 370px;
+    background-image: url(/myapp/static/assets/8320200_3891940.svg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.botonesRedes button {
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 100%;
+    background: none;
+    border: none;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.fbButton {
+    color: blue;
+    animation: wave 5s linear infinite;
+    animation-delay: 0s;
+}
+
+.igButton {
+    color: rgb(238, 25, 61);
+    animation: wave 5s linear infinite;
+    animation-delay: 1s;
+}
+
+.twButton {
+    color: rgb(0, 136, 255);
+    animation: wave 5s linear infinite;
+    animation-delay: 3s;
+}
+
+.wtButton {
+    color: rgb(8, 122, 8);
+    animation: wave 5s linear infinite;
+    animation-delay: 4s;
+}
+
+i {
+    font-size: 1.5rem;
+}
+
+.enlaceContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    opacity: 0;
+}
+
+
+.enlaceContainer button {
+    margin: 10px;
+}
+
+.buttonCopy {
+    padding: 10px;
+    background: linear-gradient(90deg, #27debf, #10aa62);
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 900;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.scrolldown {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 21ch;
+
+    animation: typing 2s steps(20), blink .5s infinite step-end alternate;
+    overflow: hidden;
+
+}
+
+#inputEnlace {
+    border: none;
+}
+
+#cards-SMS {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    padding: 10px;
+    padding-bottom: 100px;
+    scroll-snap-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#cards-SMS h1 {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+    border-bottom: 1px rgb(255, 255, 255) solid;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+}
+
+.containerSMS {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-bottom: 100px;
+    gap: 20px;
+}
+
+.fa-message-smile {
+    font-size: 1rem;
+    color: red;
+    display: block;
+}
+
+.card {
+    width: 280px;
+    height: 135px;
+    padding: 5px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    background: rgb(42, 255, 102);
+    border-radius: 10px;
+    overflow-y: scroll;
+}
+
+
+.card p {
+    letter-spacing: -0.8px;
+    color: rgb(19, 16, 16);
+    font-weight: 600;
+    margin: 0 auto;
+}
+
+.fa-comment {
+    margin-left: 10px;
+    animation: colorFade 10s infinite;
+}
+
+@keyframes colorFade {
+    0% {
+        color: #42B983;
+    }
+
+    20% {
+        color: #FCC117;
+    }
+
+    40% {
+        color: #7F3DFF;
+    }
+
+    60% {
+        color: #FF3D71;
+    }
+
+    80% {
+        color: #FF6D2A;
+    }
+
+    100% {
+        color: #42B983;
+    }
+}
+
+
+
+@keyframes wave {
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.3);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+
+@keyframes blink {
+    50% {
+        border-color: transparent
+    }
+}

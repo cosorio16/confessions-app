@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6d3d300;
+}
+
+h1 {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.imgLog {
+    width: 240px;
+    height: 65%;
+    background-image: url("/myapp/static/assets/6531.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-position: center;
+    background-size: 100%;
+    border-radius: 20px;
+}
+
+.cardLog {
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.boxsh {
+    width: 300px;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 0 0 5px #1e1d1db1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #ffffffe2;
+    box-shadow: 0px 0px 2px 2px rgba(6, 24, 227, 0.19);
+}
+
+.formLog input {
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    text-align: center;
+    height: 40px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 10px;
+    background: transparent;
+}
+
+input:focus {
+    outline: none;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    background: none;
+}
+
+button {
+    background: transparent;
+    background-color: none;
+    border: none;
+    padding: 5px;
+    animation: expand 1s infinite;
+}
+
+
+i {
+    font-size: 1.4rem;
+    color: rgb(4, 57, 31);
+}
+
+footer {
+    width: 100vw;
+    height: 10vh;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(40, 101, 86, 0.82);
+    border-top: 2px solid rgb(163, 196, 163);
+}
+
+p {
+    font-size: 0.7rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

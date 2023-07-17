@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.imgPerfil {
+    width: 300px;
+    height: 300px;
+    background-image: url(/myapp/static/assets/9936445_4318688.svg);
+}
+
+h1 {
+    font-size: 1rem;
+    font-family: 'Signika', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-top: 40px;
+}
+
+form {
+    margin: 0 auto;
+}
+
+.sendButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 5px;
+    background: transparent;
+    border: none;
+    
+}
+
+input {
+    height: 50px;
+    padding: 5px;
+}
+
+label {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+i{
+    font-size: 1.5rem;
+    color: rgb(5, 90, 32);
+    margin-right: 2px;
+}
+
+p {
+    font-family: 'Signika', sans-serif;
+}
+
+.homeButton {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background:  linear-gradient(90deg, rgb(27, 191, 27),rgb(44, 164, 164));
+    margin-top: 20px;
+    color: white;
+    font-weight: 900;
+    animation: expand 1.5s infinite;
+}
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

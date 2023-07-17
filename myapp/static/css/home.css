@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+h1 {
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 1px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;;
+    width: 220px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin: 10px;
+}
+
+.container-info-options {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url("/myapp/static/assets/homebckg.svg");
+    width: 90vw;
+    height: 60vh;
+    object-fit: cover;
+    margin-right: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+button {
+    width: 190px;
+    height: 45px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    color: white;
+    background: linear-gradient(90deg, rgba(223, 62, 62, 0.647), rgb(233, 0, 0));
+    border: none;
+    box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.38);
+    animation: expand 2s infinite;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+
+
+@keyframes expand {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
